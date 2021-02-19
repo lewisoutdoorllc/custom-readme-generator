@@ -1,9 +1,10 @@
 // TODO: Create a function to generate markdown for README
-function generateReadme(data) {
+const renderLicenseBadge = require("./generateLicense");
+const generateReadMe = (data) => {
   return ` 
-  # ${data.title} Lewis-Weather-Dashboard 
-  // ------ INSERT BADGE HERE FOR LICENSE  ------------------------------------ //
-  ## ${data.tableOfContents} Table of Contents 
+  # ${data.title} 
+  ${renderLicenseBadge(data.license)}
+  ## Table of Contents 
   
   * [Description](#description)
   * [Installation](#installation)
@@ -19,35 +20,33 @@ function generateReadme(data) {
   ${data.description}
   
   ## Installation
-  ${data.installation}
-  Link to GitHub Repository:  [${data.repoLink}](https://github.com/${data.gitHubUserName}/${data.repoLink})  
+  ${data.installation}  
+  Link to GitHub Repository:  [${data.title}](https://github.com/${data.gitHubUserName}/${data.repoLink})  
   
   ## Lauguages Used For Application Development
   ${data.languages}
   
-   ##Usage
+  ## Usage
   ${data.usage}
 
   ## Screenshot of Application
-  ![alt text](${data.screenShot})
+  ![${data.title}](${data.screenShot})
 
   ## Test
   ${data.test}
   ## Questions
-  //-------------------------- GitHub ProFile Link Here --------------------------------------------//
-  GitHub Link: ${data.gitHubUserName}(https://github.com/${data.gitHubUserName})
+
+  GitHub Link: (https://github.com/${data.gitHubUserName})
 
   Contact via Email: ${data.email}
 
-  Contact me by Email
   ## Credits
   ${data.credits}
 
   ## License
-  ${data.license}
-  // ------ INSERT BADGE HERE FOR LICENSE  --------------------------------------- //
-  ${renderLicenseText(data)}
+  ${renderLicenseBadge(data.license)}
+  
     `;
 };
 
-module.exports = generateReadme;
+module.exports = generateReadMe;

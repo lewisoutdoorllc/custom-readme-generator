@@ -1,9 +1,9 @@
 const fs = require('fs');
 
 // writing files
-const writeReadMe = fileContent => {
+const writeFile = fileContent => {
   return new Promise((resolve, reject) => {
-    fs.writeReadMe('index.js', fileContent, err => {
+    fs.writeFile('./dist/ReadMe.md', fileContent, err => {
       if (err) {
         reject(err);
         return;
@@ -17,4 +17,4 @@ const writeReadMe = fileContent => {
   });
 };
 
-module.exports = { writeReadMe };
+module.exports = writeFile;

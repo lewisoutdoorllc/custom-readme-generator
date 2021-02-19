@@ -2,7 +2,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateReadMe = require('./src/ReadMe-template');
-const writeReadMe = require('./utils/generateReadMe');
+const writeFile = require('./utils/generateReadMe');
 
 console.log(`
 =========================================================
@@ -11,8 +11,7 @@ console.log(`
 *********************************************************
  - Welcome to README Generator!
  - Follow the prompts and enter the required information.
- - If there are no instructions for a required section,
-   press the space-bar followed by enter to continue!
+
 *********************************************************
 `);
 // TODO: Create an array of questions for user input
@@ -21,13 +20,26 @@ const promptUser = () => {
     return inquirer.prompt([
         {
             type: 'input',
+            name: 'title',
+            message: 'Provide a title for your project (Required)',
+            validate: descriptionInput => {
+              if (descriptionInput) {
+                return true;
+              } else {
+                console.log('Please enter a title for you project!');
+                return false;
+              }
+            }
+          },
+        {
+            type: 'input',
             name: 'description',
             message: 'Provide a description of the project (Required)',
             validate: descriptionInput => {
               if (descriptionInput) {
                 return true;
               } else {
-                console.log('You need to enter a project description!');
+                console.log('Please enter a desription of your project!');
                 return false;
               }
             }
@@ -143,7 +155,7 @@ const promptUser = () => {
         }
       },
       {
-        type: 'checkbox',
+        type: 'list',
         name: 'license',
         message: 'Select a license from the list below:',
         choices: [
@@ -155,10 +167,10 @@ const promptUser = () => {
             "BSD 3-Clause 'New' or 'Revised' License",
             'Boost Software License 1.0',
             'Creative Commons Zero v1.0 Universal',
-            'Eclipse Public License 2.0',
+            'Eclipse Public License 1.0',
             'GNU Affero General Public License v3.0',
             'GNU General Public License v2.0',
-            'GNU Lesser General Public License v2.1',
+            'GNU Lesser General Public License v3.0',
             'Mozilla Public License 2.0',
             'The Unlicense',
         ],
@@ -173,27 +185,19 @@ const promptUser = () => {
     }
     ])
 }; 
-
-function generateReadMe() {
-    try {
-        // Ask user questions and generate responses
-        const data = await promptUser();
-        const generateReadme = generateReadme(data);
-        // Write new README.md to dist directory
-        await writeReadMe('./dist/README.md', generateReadMe);
-        console.log('✔️  Successfully wrote to README.md');
-    }   catch(err) {
+promptUser()
+    .then(data => {
+        return generateReadMe(data); 
+    })
+    .then(write => {
+        return writeFile(write);
+    })
+    .then(writeResponse =>{
+        console.log(writeResponse);
+        console.log('test this shit');
+    })
+    .catch(err => {
         console.log(err);
-    }
-  }
-  
-  generateReadMe();  
+    });
 
-
-// TODO: Create a function to write README file
-//function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-
-
-// Function call to initialize app
+   
