@@ -17,28 +17,34 @@ const generateReadMe = (data) => {
   * [License](#license)
   
   ## Description
+
   ${data.description}
   
   ## Installation
+
   ${data.installation}  
   Link to GitHub Repository: ${data.repoLink}
   
   ## Languages
+  
   ${data.languages}
   
   ## Usage
+
   ${data.usage}
 
   ## Screenshot
-  ${data.title}
-  ${data.screenShot}
+    
+  ![${data.title}](${data.screenShot})
 
   ## Test
+
   ${data.test}
+
   ## Questions  
 
   GitHub Link: https://github.com/${data.gitHubUserName}
-
+  
   Contact via Email: ${data.email}
 
   ## Credits
