@@ -130,7 +130,7 @@ const promptUser = () => {
           },
     {
         type: 'input',
-        name: 'screenshot',
+        name: 'screenShot',
         message: 'Please provide a screenshot of the application. (Required)',
         validate: screenshotInput => {
           if (screenshotInput) {

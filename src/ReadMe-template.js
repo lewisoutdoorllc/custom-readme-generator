@@ -23,15 +23,15 @@ const generateReadMe = (data) => {
   ${data.installation}  
   Link to GitHub Repository: ${data.repoLink}
   
-  ## Lauguages
+  ## Languages
   ${data.languages}
   
   ## Usage
   ${data.usage}
 
   ## Screenshot
-  ![${data.title}]  
-  (${data.screenShot})
+  ${data.title}
+  ${data.screenShot}
 
   ## Test
   ${data.test}
