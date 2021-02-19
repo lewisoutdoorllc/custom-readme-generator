@@ -6,12 +6,26 @@ const writeFile = require('./utils/generateReadMe');
 
 console.log(`
 =========================================================
-            Personalized README Generator
+            Custom README Generator
 =========================================================
 *********************************************************
- - Welcome to README Generator!
+ - Welcome to the Cuestom README Generator!
  - Follow the prompts and enter the required information.
+ - If no answer hit spacebar and enter to move to the 
+    next question.
+*********************************************************
 
+=========================================================
+                  IMPORTANT NOTES!!
+=========================================================
+*********************************************************
+  - Please make sure if you include a screenshot 
+  of your project that it has a relative path for your 
+  application; after the completion of the following 
+  steps and your new README.md is produced please make
+  sure to move the location of the new ReadMe.md to
+  the root folder for it to display 
+  the image properly...
 *********************************************************
 `);
 // TODO: Create an array of questions for user input
@@ -53,6 +67,19 @@ const promptUser = () => {
                 return true;
               } else {
                 console.log('Please enter a name for your application!');
+                return false;
+              }
+            }
+          },
+          {
+            type: 'input',
+            name: 'usage',
+            message: 'Provide a description of how to use this application (Required)',
+            validate: usageInput => {
+              if (usageInput) {
+                return true;
+              } else {
+                console.log('Please enter a application description!');
                 return false;
               }
             }
@@ -115,19 +142,7 @@ const promptUser = () => {
             message: 'What languages did you use to build this application? (Check all that apply)',
             choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
           },
-          {
-            type: 'input',
-            name: 'usage',
-            message: 'Provide a description of how to use this application (Required)',
-            validate: usageInput => {
-              if (usageInput) {
-                return true;
-              } else {
-                console.log('Please enter a application description!');
-                return false;
-              }
-            }
-          },
+          
     {
         type: 'input',
         name: 'screenShot',
@@ -182,9 +197,13 @@ const promptUser = () => {
                 return false;
             }
         }
+        
     }
+    
     ])
+    
 }; 
+
 promptUser()
     .then(data => {
         return generateReadMe(data); 
@@ -194,7 +213,7 @@ promptUser()
     })
     .then(writeResponse =>{
         console.log(writeResponse);
-        console.log('test this shit');
+        console.log('This Is Awesome Right');
     })
     .catch(err => {
         console.log(err);
