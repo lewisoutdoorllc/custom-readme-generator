@@ -1,46 +1,47 @@
  
-  # Custom README Generator 
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  # vv 
+  [![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)
   ## Table of Contents 
   
   * [Description](#description)
   * [Installation](#installation)
-  * [Languages](#languages-used-for-application-development)
+  * [Languages](#languages)
   * [Usage](#usage)
-  * [Screenshot](#screenshot-of-landing-page)
+  * [Screenshot](#screenshot)
   * [Test](#test)
   * [Questions](#questions)
   * [Credits](#credits)
   * [License](#license)
   
   ## Description
-  This will create a custom README
+  vs code
   
   ## Installation
-  Visit the repo please  
-  Link to GitHub Repository:  [Custom README Generator](https://github.com/lewisoutdoorllc/https://github.com/lewisoutdoorllc/custom-readme-generator)  
+  nope  
+  Link to GitHub Repository: https://github.com/lewisoutdoorllc/custom-readme-generator/
   
-  ## Lauguages Used For Application Development
-  
+  ## Lauguages
+  CSS,Node
   
   ## Usage
-  Hit up the repo
+  hell no
 
-  ## Screenshot of Application
-  ![Custom README Generator](undefined)
+  ## Screenshot
+  ![vv]  
+  (undefined)
 
   ## Test
-  Test this bitch!!
-  ## Questions
+  fuck no
+  ## Questions  
 
-  GitHub Link: (https://github.com/lewisoutdoorllc)
+  GitHub Link: https://github.com/lewisoutdoorllc
 
   Contact via Email: lewisoutdoor@yahoo.com
 
   ## Credits
-  Just Me LOL
+  nver
 
   ## License
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)
   
     

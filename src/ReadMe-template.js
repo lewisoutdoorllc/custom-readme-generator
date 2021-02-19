@@ -8,9 +8,9 @@ const generateReadMe = (data) => {
   
   * [Description](#description)
   * [Installation](#installation)
-  * [Languages](#languages-used-for-application-development)
+  * [Languages](#languages)
   * [Usage](#usage)
-  * [Screenshot](#screenshot-of-landing-page)
+  * [Screenshot](#screenshot)
   * [Test](#test)
   * [Questions](#questions)
   * [Credits](#credits)
@@ -21,22 +21,23 @@ const generateReadMe = (data) => {
   
   ## Installation
   ${data.installation}  
-  Link to GitHub Repository:  [${data.title}](https://github.com/${data.gitHubUserName}/${data.repoLink})  
+  Link to GitHub Repository: ${data.repoLink}
   
-  ## Lauguages Used For Application Development
+  ## Lauguages
   ${data.languages}
   
   ## Usage
   ${data.usage}
 
-  ## Screenshot of Application
-  ![${data.title}](${data.screenShot})
+  ## Screenshot
+  ![${data.title}]  
+  (${data.screenShot})
 
   ## Test
   ${data.test}
-  ## Questions
+  ## Questions  
 
-  GitHub Link: (https://github.com/${data.gitHubUserName})
+  GitHub Link: https://github.com/${data.gitHubUserName}
 
   Contact via Email: ${data.email}
 
