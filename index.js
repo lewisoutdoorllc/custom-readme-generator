@@ -138,8 +138,8 @@ const promptUser = () => {
           },
           {
             type: 'checkbox',
-            name: 'languages',
-            message: 'What languages did you use to build this application? (Check all that apply)',
+            name: 'technology',
+            message: 'What technologies did you use to build this application? (Check all that apply)',
             choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
           },
           
