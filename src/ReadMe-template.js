@@ -12,6 +12,7 @@ const generateReadMe = (data) => {
   * [Usage](#usage)
   * [Screenshot](#screenshot)
   * [Test](#test)
+  * [Contribute](#contribute)
   * [Questions](#questions)
   * [Credits](#credits)
   * [License](#license)
@@ -40,6 +41,10 @@ const generateReadMe = (data) => {
   ## Test
 
   ${data.test}
+
+  ## Contribute
+
+  ${data.contribute}
 
   ## Questions  
 

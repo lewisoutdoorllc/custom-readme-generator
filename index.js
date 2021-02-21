@@ -170,6 +170,19 @@ const promptUser = () => {
         }
       },
       {
+        type: 'input',
+        name: 'contribute',
+        message: 'Please provide information on how we can contribute to this application. (Required)',
+        validate: testInput => {
+          if (testInput) {
+            return true;
+          } else {
+            console.log('Please provide information on contributing to this application!');
+            return false;
+          }
+        }
+      },
+      {
         type: 'list',
         name: 'license',
         message: 'Select a license from the list below:',
